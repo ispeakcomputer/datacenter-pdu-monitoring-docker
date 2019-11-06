@@ -28,9 +28,9 @@ Must be in the folder with the docker-compose.yml file -d means this will detach
 
 **run a single telegraf collection, outputing metrics to stdout. This checks Telegraf input plugin**
  
-``` telegraf --config telegraf.conf –test
+``` telegraf --config telegraf.conf –test ```
 
-``` curl -G "http://localhost:8086/query?db=telegraf" --data-urlencode "q=show series on 'telegraf'" ```
+``` curl -G "http://localhost:8086/query?db=telegraf" --data-urlencode 'q=show series on "telegraf"'```
 
 **deploy**
 
