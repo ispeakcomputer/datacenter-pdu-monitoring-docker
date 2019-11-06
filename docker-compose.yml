@@ -1,0 +1,38 @@
+version: '3.3'
+
+services:
+   
+   influxdb:
+     image: influxdb
+     ports:
+         - "8086:8086"
+         - "8083:8083" 
+     volumes:
+       - influxdb:/var/lib/influxdb
+     restart: always
+     environment:
+       INFLUXDB_ADMIN_USER: admin 
+       INFLUXDB_ADMIN_PASSWORD: admin 
+   grafana:
+     depends_on:
+       - influxdb
+     volumes:
+         - $PWD/grafana-storage:/var/lib/grafana:rw
+     image: grafana/grafana
+     ports:
+       - "3000:3000"
+     restart: always
+   
+   telegraph:
+     depends_on:
+       - influxdb
+     volumes:
+       - $PWD/telegraf.conf:/etc/telegraf/telegraf.conf:ro    
+     image: telegraf 
+     restart: always
+volumes: 
+  
+  influxdb:
+
+  grafana-storage:
+
