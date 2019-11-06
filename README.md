@@ -2,7 +2,7 @@
 
 **Run the Docker Compose File**
 
-docker-compose up -d 
+``` docker-compose up -d ```
 
 Must be in the folder with the docker-compose.yml file -d means this will detach and run in the background
 
