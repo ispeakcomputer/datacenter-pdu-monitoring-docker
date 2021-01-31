@@ -1,3 +1,7 @@
+# Datacenter PDU Power Monitoring with Grafana, influxdb, and telegraf
+
+I put this together in order to monitor a datacenters PDUs. 
+
 ### Commands that you may need for testing purposes
 
 **Run the Docker Compose File**
