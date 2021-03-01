@@ -43,6 +43,6 @@ Create a user on the box you are moving to.
 move grafana-storage folder and the telegraf.conf config to the folder where you put 
 the docker-composer.yml then run 
 
-``` docker-compose up ```
+``` docker-compose up -d ```
  
 
